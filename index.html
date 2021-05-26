@@ -1,0 +1,39 @@
+<html lang="en" ng-app="angular">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular React</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+
+    <style>
+      [ng\:cloak],
+      [ng-cloak],
+      [data-ng-cloak],
+      [x-ng-cloak],
+      .ng-cloak,
+      .x-ng-cloak {display: none !important;}
+
+      .react-app {
+        background: khaki;
+      }
+  </style>
+  </head>
+  <body>
+    <div ng-controller="loginController" ng-cloak>
+      <form ng-submit="login()" style="display: grid; justify-content: start;">
+        <label for="username">Username</label>
+        <input type="text" ng-model="username" /><br />
+        <label for="password">Password</label>
+        <input type="password" ng-model="password" /><br />
+        <input type="submit" value="Submit" style="justify-self: end;"/>
+      </form>
+
+      <div react-app class="react-app" user="user"></div>
+    </div>
+
+    <script src="dist/react.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
